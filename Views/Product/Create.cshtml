@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Product";
+}
+
+<h2>Create Product</h2>
+<form method="post">
+    <label for="title">Title</label> <!--the for attribute to point to the tag input with id = title -->
+    <input type="text" id="title" name="title" />
+    <span>*</span> <!--For error message-->
+    <br/>
+
+    <label for="price">Price</label>
+    <input type="text" id="price" name="price" />
+    <span>*</span>
+    <br/>
+
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" />
+    <span>*</span>
+    <br />
+
+    <button type="submit" name="submit">Add Product</button>
+    <button type="button" name="clear">Clear</button>
+</form>

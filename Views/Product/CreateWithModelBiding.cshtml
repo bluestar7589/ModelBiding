@@ -1,0 +1,54 @@
+﻿<!-- To biding data from client to server -->
+@model Products
+
+@{
+    ViewData["Title"] = "Create With Model Biding";
+}
+
+<h2>Create Product</h2>
+
+<form method="post">
+    <div>
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="Title" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="Title" class="form-control"/>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="Price" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="Price" class="form-control"/>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3 form-group">
+            <div class="col-3">
+                <label asp-for="Quantity" class="form-label"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="Quantity" class="form-control"/>
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row">
+        <div class="col-12">
+            <button type="submit" name="submit" class="btn btn-primary">Add Product</button>
+            <button type="button" name="clear" class="btn btn-secondary">Clear</button>
+        </div>
+    </div>
+    </div>
+</form>
+
+<!--To activate the javascript - jQuery to validate the data->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
